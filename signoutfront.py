@@ -171,8 +171,15 @@ def SignSimulation(sign_cycle, read_mean, read_sd, slide_count, days_per_week, s
 
     #percentage seen by students collectively
     percentage_of_slides_seen_by_students = (len(total_real_seen_collective_sorted) / slide_count)*100
-
     print(f"    Percentage of slides seen by student body: %{percentage_of_slides_seen_by_students}")
+
+
+    #average of collective
+    total_before_divide = 0
+    for i in collective_percentage:
+        total_before_divide += i
+    average_amount_of_slides_seen_by_student_body = total_before_divide / len(collective_percentage)
+    print(f"    Average of percentages of slides each student saw: %{average_amount_of_slides_seen_by_student_body}")
 
 
 #taking input
